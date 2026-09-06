@@ -22,6 +22,7 @@
         <button class="product-tab" type="button" data-product-tab="rollcall" aria-selected="false">Rollcall</button>
         <button class="product-tab" type="button" data-product-tab="quire" aria-selected="false">Quire</button>
         <button class="product-tab" type="button" data-product-tab="voxora" aria-selected="false">Voxora</button>
+        <button class="product-tab" type="button" data-product-tab="agentscan" aria-selected="false">AgentScan</button>
       </nav>
       <a class="text-link github-link" data-current-github href="https://github.com/hgus107/kiln" target="_blank" rel="noreferrer">
         <svg class="github-mark" viewBox="0 0 16 16" width="38" height="38" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
@@ -256,6 +257,67 @@
       </section>
     </main>
 
+    <main data-product-panel="agentscan" hidden>
+      <section class="hero section-shell">
+        <div class="hero-copy">
+          <p class="eyebrow">Private By Design</p>
+          <h1>Scan Code For Risks Locally.</h1>
+          <p class="hero-text">Point it at code, get the risks back. Application, dependency, agent-instruction, and MCP-config checks that run on your Mac. No uploads, no account, no limits. Your source never leaves the machine.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="https://github.com/hgus107/agentscan/releases/latest/download/AgentScan_0.1.0_arm64.dmg">Download For Apple Silicon</a>
+            <span class="download-note">Free · macOS 13+ · Version 0.1.0</span>
+          </div>
+        </div>
+
+        <div class="app-preview" aria-label="AgentScan Application Preview">
+          <div class="window-bar">
+            <div class="traffic-lights" aria-hidden="true"><span></span><span></span><span></span></div>
+            <span class="window-title">AgentScan</span>
+          </div>
+          <div class="preview-body">
+            <aside class="preview-settings">
+              <p class="preview-label">Scan Target</p>
+              <div class="preview-field"><span>Source</span><strong>Local Folder</strong></div>
+              <div class="preview-field"><span>Semgrep</span><strong>Enabled</strong></div>
+              <div class="preview-field"><span>OSV-Scanner</span><strong>Enabled</strong></div>
+            </aside>
+            <div class="preview-queue">
+              <div class="queue-heading"><strong>Findings</strong><span>4 Categories</span></div>
+              <div class="drop-zone"><span class="drop-icon">+</span><span><strong>Drop A Folder Or Repo</strong><small>App · Dependencies · Agent · MCP</small></span></div>
+              <div class="queue-row queue-header"><span>Finding</span><span>Location</span><span>Severity</span></div>
+              <div class="queue-row"><span>Live credential detected</span><span>config.py · 12</span><span class="status">Critical</span></div>
+              <div class="queue-row"><span>Broad access configured</span><span>mcp.json · 4</span><span class="status">Review</span></div>
+              <div class="preview-actions"><span>7 Findings</span><span><button type="button" tabindex="-1">Rescan</button><button type="button" tabindex="-1">Export</button></span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="benefits section-shell" aria-labelledby="agentscan-benefits-title">
+        <div class="section-heading"><p class="eyebrow">Built For Your Code</p><h2 id="agentscan-benefits-title">Your Source Never Leaves The Machine.</h2></div>
+        <div class="card-grid">
+          <article class="feature-card"><h3>Private</h3><p>The scan runs locally. Your code, the rules, and the findings all stay on your Mac.</p></article>
+          <article class="feature-card"><h3>Broad</h3><p>Application, dependency, agent-instruction, and MCP-config checks in a single pass.</p></article>
+          <article class="feature-card"><h3>Deeper With Tools</h3><p>Add Semgrep and OSV-Scanner for real static analysis and known-CVE lookups.</p></article>
+        </div>
+      </section>
+
+      <section class="formats section-shell" aria-labelledby="agentscan-checks-title">
+        <div><p class="eyebrow">What It Scans</p><h2 id="agentscan-checks-title">The Risks That Actually Matter.</h2></div>
+        <div class="format-list" aria-label="Scan Categories"><span>Secrets</span><span>Code Execution</span><span>Insecure Config</span><span>Dependencies</span><span>Known CVEs</span><span>Agent Instructions</span><span>MCP Config</span></div>
+      </section>
+
+      <section class="install section-shell" aria-labelledby="agentscan-install-title">
+        <div class="section-heading"><p class="eyebrow">Three Simple Steps</p><h2 id="agentscan-install-title">Findings In Less Than A Minute.</h2></div>
+        <ol class="install-list">
+          <li><span>1</span><div><strong>Download AgentScan</strong><p>Get the signed and notarized Apple Silicon installer.</p></div></li>
+          <li><span>2</span><div><strong>Move To Applications</strong><p>Open the DMG, then drag AgentScan into your Applications folder.</p></div></li>
+          <li><span>3</span><div><strong>Point And Scan</strong><p>Choose a folder or repository, then read the findings grouped by area.</p></div></li>
+        </ol>
+        <a class="button button-primary install-button" href="https://github.com/hgus107/agentscan/releases/latest/download/AgentScan_0.1.0_arm64.dmg">Download AgentScan Free</a>
+      </section>
+    </main>
+
     <footer class="footer section-shell">
       <div class="brand footer-brand"><span class="brand-mark" data-current-mark aria-hidden="true">K</span><span data-current-name>Kiln</span></div>
       <p><span data-current-version>Version 0.1.2 · macOS 13+</span> · Apple Silicon</p>
@@ -266,6 +328,6 @@
       </nav>
     </footer>
 
-    <script src="./site.js?v=voxora-1.4" defer></script>
+    <script src="./site.js?v=agentscan-0.1.0" defer></script>
   </body>
 </html>

@@ -31,6 +31,14 @@ const products = {
     github: "https://github.com/hgus107/voxora",
     version: "Version 1.4 · macOS 14+",
   },
+  agentscan: {
+    name: "AgentScan",
+    mark: "A",
+    title: "AgentScan — Scan Code for Security Risks Locally",
+    description: "Scan code for security risks locally on your Mac. Application, dependency, agent-instruction, and MCP-config checks. Your source never leaves the machine.",
+    github: "https://github.com/hgus107/agentscan",
+    version: "Version 0.1.0 · macOS 13+",
+  },
 };
 
 function setProduct(productName, updateHistory = true) {
