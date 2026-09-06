@@ -34,6 +34,7 @@ const products = {
   agentscan: {
     name: "AgentScan",
     mark: "A",
+    logo: "./agentscan-logo.svg",
     title: "AgentScan — Scan Code for Security Risks Locally",
     description: "Scan code for security risks locally on your Mac. Application, dependency, agent-instruction, and MCP-config checks. Your source never leaves the machine.",
     github: "https://github.com/hgus107/agentscan",
@@ -59,7 +60,13 @@ function setProduct(productName, updateHistory = true) {
     tab.setAttribute("aria-selected", String(active));
   });
   document.querySelectorAll("[data-current-name]").forEach((node) => { node.textContent = product.name; });
-  document.querySelectorAll("[data-current-mark]").forEach((node) => { node.textContent = product.mark; });
+  document.querySelectorAll("[data-current-mark]").forEach((node) => {
+    if (product.logo) {
+      node.innerHTML = `<img class="brand-logo" src="${product.logo}" alt="${product.name}" />`;
+    } else {
+      node.textContent = product.mark;
+    }
+  });
   document.querySelector(".topbar > .brand").href = selectedName === "voxora"
     ? "./suite.html?app=voxora"
     : "./";
