@@ -67,9 +67,14 @@ function setProduct(productName, updateHistory = true) {
       node.textContent = product.mark;
     }
   });
-  document.querySelector(".topbar > .brand").href = (selectedName === "voxora" || selectedName === "agentscan")
-    ? `./suite.html?app=${selectedName}`
-    : "./";
+  const brandLink = document.querySelector(".topbar > .brand");
+  if (selectedName === "agentscan") {
+    brandLink.removeAttribute("href");
+    brandLink.style.cursor = "default";
+  } else {
+    brandLink.style.cursor = "";
+    brandLink.href = selectedName === "voxora" ? "./suite.html?app=voxora" : "./";
+  }
   document.querySelectorAll("[data-current-github]").forEach((link) => { link.href = product.github; });
   document.querySelectorAll("[data-current-releases]").forEach((link) => { link.href = `${product.github}/releases`; });
   document.querySelectorAll("[data-current-license]").forEach((link) => { link.href = `${product.github}/blob/main/LICENSE`; });
