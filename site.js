@@ -40,6 +40,15 @@ const products = {
     github: "https://github.com/hgus107/agentscan",
     version: "Version 0.1.0 · macOS 13+",
   },
+  voiceover: {
+    name: "VoiceOver",
+    mark: "V",
+    logo: "./voiceover-logo.svg",
+    title: "VoiceOver — Shape Your Voice Locally",
+    description: "Record, convert, preview, and save your voice locally on your Mac. Eight reference voices, adjustable speed, and no uploads.",
+    github: "https://github.com/hgus107/VoiceOver",
+    version: "Version 0.1.0 · macOS 14+",
+  },
 };
 
 function setProduct(productName, updateHistory = true) {
@@ -73,7 +82,7 @@ function setProduct(productName, updateHistory = true) {
     brandLink.style.cursor = "default";
   } else {
     brandLink.style.cursor = "";
-    brandLink.href = selectedName === "voxora" ? "./suite.html?app=voxora" : "./";
+    brandLink.href = ["voxora", "voiceover"].includes(selectedName) ? `./suite.html?app=${selectedName}` : "./";
   }
   document.querySelectorAll("[data-current-github]").forEach((link) => { link.href = product.github; });
   document.querySelectorAll("[data-current-releases]").forEach((link) => { link.href = `${product.github}/releases`; });

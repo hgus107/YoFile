@@ -85,6 +85,47 @@ body[data-product="agentscan"] .brand-mark {
   overflow: hidden;
 }
 
+body[data-product="voiceover"] {
+  --orange: #f25500;
+  --orange-hover: #ff6a14;
+  background:
+    radial-gradient(circle at 72% 13%, rgba(242, 85, 0, 0.16), transparent 25rem),
+    var(--background);
+}
+
+body[data-product="voiceover"] .brand-mark {
+  background: #f25500;
+  box-shadow: 0 8px 28px rgba(242, 85, 0, 0.24);
+  overflow: hidden;
+}
+
+.voiceover-preview { background: #edf5ff; }
+.voiceover-window-bar { border-bottom-color: #d6e0ed; background: #f8fbff; }
+.voiceover-window-bar .window-title { color: #23324a; }
+.vo-app { min-height: 430px; padding: 0 18px 18px; color: #172844; background: white; }
+.vo-header { display: flex; align-items: center; justify-content: space-between; min-height: 67px; padding: 0 7px; font-size: 10px; font-weight: 750; }
+.vo-brand { display: flex; align-items: center; gap: 9px; }
+.vo-brand img { width: 36px; height: 36px; border-radius: 9px; }
+.vo-brand > span { display: grid; gap: 2px; }
+.vo-brand b { font-size: 15px; }
+.vo-brand small { color: #69758a; font-size: 8px; }
+.vo-recorder { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 17px; min-height: 92px; padding: 15px 21px; border: 1px solid #bed8fa; border-radius: 11px; background: #edf5ff; }
+.vo-recorder strong { font-size: 30px; font-weight: 400; letter-spacing: -0.05em; }
+.vo-recorder b { color: #647187; font-size: 11px; }
+.vo-wave { overflow: hidden; color: #86a6d1; font-size: 18px; letter-spacing: 1px; white-space: nowrap; }
+.vo-steps { display: grid; grid-template-columns: 0.8fr 2fr 1.2fr; gap: 10px; padding: 15px 8px 7px; color: #f25500; font-size: 8px; font-weight: 850; letter-spacing: 0.05em; }
+.vo-styles { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+.vo-styles > span { display: grid; gap: 5px; padding: 8px; border-radius: 8px; background: #edf5ff; text-align: center; }
+.vo-styles b { font-size: 10px; }
+.vo-styles i { padding: 6px 8px; border: 1px solid #f25500; border-radius: 6px; color: #111; background: white; font-size: 8px; font-style: normal; font-weight: 500; }
+.vo-speed { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 12px; padding: 14px 34px 11px; font-size: 10px; }
+.vo-speed > span { height: 5px; border-radius: 99px; background: #d8dce2; }
+.vo-speed > span i { display: block; width: 43%; height: 5px; border-radius: inherit; background: #f25500; }
+.vo-speed strong { color: #f25500; }
+.vo-actions { display: flex; justify-content: flex-end; gap: 8px; padding-top: 12px; border-top: 1px solid #dce2ea; }
+.vo-actions b { padding: 8px 11px; border: 1px solid #f25500; border-radius: 7px; background: white; font-size: 9px; }
+.vo-actions b:last-child { color: white; background: #f25500; }
+
 .brand-mark .brand-logo {
   display: block;
   width: 100%;
@@ -1277,6 +1318,34 @@ body[data-product="quire"] .formats {
   .voxora-wave {
     width: 100%;
     text-align: center;
+  }
+
+  .vo-recorder {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 10px;
+  }
+
+  .vo-wave {
+    width: 100%;
+    text-align: center;
+  }
+
+  .vo-steps {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+
+  .vo-styles {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .vo-speed {
+    padding-inline: 8px;
+  }
+
+  .vo-actions {
+    flex-wrap: wrap;
   }
 
   .topbar > .text-link {
