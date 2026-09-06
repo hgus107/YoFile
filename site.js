@@ -67,8 +67,8 @@ function setProduct(productName, updateHistory = true) {
       node.textContent = product.mark;
     }
   });
-  document.querySelector(".topbar > .brand").href = selectedName === "voxora"
-    ? "./suite.html?app=voxora"
+  document.querySelector(".topbar > .brand").href = (selectedName === "voxora" || selectedName === "agentscan")
+    ? `./suite.html?app=${selectedName}`
     : "./";
   document.querySelectorAll("[data-current-github]").forEach((link) => { link.href = product.github; });
   document.querySelectorAll("[data-current-releases]").forEach((link) => { link.href = `${product.github}/releases`; });

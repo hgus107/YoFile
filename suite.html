@@ -9,7 +9,7 @@
     <meta id="og-description" property="og:description" content="A fast and private image converter for Mac. No uploads, no subscription, no limits." />
     <meta property="og:type" content="website" />
     <title>Kiln — Convert Images Locally</title>
-    <link rel="stylesheet" href="./styles.css?v=20260906-agentscan" />
+    <link rel="stylesheet" href="./styles.css?v=20260906-agentscan2" />
   </head>
   <body data-product="kiln">
     <header class="topbar">
@@ -269,25 +269,40 @@
           </div>
         </div>
 
-        <div class="app-preview" aria-label="AgentScan Application Preview">
+        <div class="app-preview agentscan-preview" aria-label="AgentScan Application Preview">
           <div class="window-bar">
             <div class="traffic-lights" aria-hidden="true"><span></span><span></span><span></span></div>
             <span class="window-title">AgentScan</span>
           </div>
-          <div class="preview-body">
-            <aside class="preview-settings">
-              <p class="preview-label">Scan Target</p>
-              <div class="preview-field"><span>Source</span><strong>Local Folder</strong></div>
-              <div class="preview-field"><span>Semgrep</span><strong>Enabled</strong></div>
-              <div class="preview-field"><span>OSV-Scanner</span><strong>Enabled</strong></div>
-            </aside>
-            <div class="preview-queue">
-              <div class="queue-heading"><strong>Findings</strong><span>4 Categories</span></div>
-              <div class="drop-zone"><span class="drop-icon">+</span><span><strong>Drop A Folder Or Repo</strong><small>App · Dependencies · Agent · MCP</small></span></div>
-              <div class="queue-row queue-header"><span>Finding</span><span>Location</span><span>Severity</span></div>
-              <div class="queue-row"><span>Live credential detected</span><span>config.py · 12</span><span class="status">Critical</span></div>
-              <div class="queue-row"><span>Broad access configured</span><span>mcp.json · 4</span><span class="status">Review</span></div>
-              <div class="preview-actions"><span>7 Findings</span><span><button type="button" tabindex="-1">Rescan</button><button type="button" tabindex="-1">Export</button></span></div>
+          <div class="as-app">
+            <div class="as-topbar">
+              <span class="as-brand"><span class="as-brand-mark" aria-hidden="true"><svg viewBox="0 0 512 512" width="15" height="15" fill="none" stroke="#15200d" stroke-width="40" stroke-linecap="round"><path d="M190 125h-65v65m197-65h65v65M125 322v65h65m132 0h65v-65M145 256h222"/></svg></span>AgentScan</span>
+              <span class="as-promise"><i aria-hidden="true"></i>Local and Free</span>
+            </div>
+            <div class="as-workspace">
+              <aside class="as-sidebar">
+                <div class="as-heading">Select Folder or Repo <span class="as-help" aria-hidden="true">?</span></div>
+                <div class="as-modes"><span class="active">Folder</span><span>Git repo</span></div>
+                <div class="as-source">
+                  <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13c0 1.1.9 2 2 2Z"/></svg>
+                  <span><b>Select Folder</b><small>Choose a project folder</small></span>
+                </div>
+                <div class="as-actions"><span class="as-clear">Clear</span><span class="as-scan">Scan</span></div>
+              </aside>
+              <div class="as-report">
+                <div class="as-report-head">
+                  <h3>Scan Report</h3>
+                  <div class="as-pills">
+                    <span class="as-pill critical"><b>1</b><small>Critical</small></span>
+                    <span class="as-pill"><b>6</b><small>Other Findings</small></span>
+                  </div>
+                </div>
+                <div class="as-card">
+                  <header><span class="as-card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 16 4-4-4-4M6 8l-4 4 4 4M14.5 4l-5 16"/></svg></span><h4>Application Security</h4><small>2 findings</small></header>
+                  <article class="as-finding crit"><span class="as-dot" aria-hidden="true"></span><div><b>Live credential detected</b><code>config.py · line 12</code><p>A value matching an AWS key pattern was found. The value itself is omitted from the report.</p></div><strong class="as-tag">CRITICAL</strong></article>
+                  <article class="as-finding"><span class="as-dot" aria-hidden="true"></span><div><b>Dynamic code execution</b><code>handler.js · line 47</code><p>Use of eval can execute arbitrary code, especially with untrusted input.</p></div></article>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -328,6 +343,6 @@
       </nav>
     </footer>
 
-    <script src="./site.js?v=agentscan-0.1.1" defer></script>
+    <script src="./site.js?v=agentscan-0.1.2" defer></script>
   </body>
 </html>

@@ -93,6 +93,52 @@ body[data-product="agentscan"] .brand-mark {
   border-radius: inherit;
 }
 
+/* AgentScan app preview — mirrors the real desktop UI */
+.agentscan-preview { background: #141814; }
+.as-app { background: #141814; color: #eef5f0; overflow: hidden; }
+.as-topbar { display: flex; align-items: center; height: 46px; padding: 0 15px; background: #191d1a; border-bottom: 1px solid #303730; }
+.as-brand { display: flex; align-items: center; gap: 9px; font-weight: 850; font-size: 13px; letter-spacing: -0.3px; }
+.as-brand-mark { display: grid; place-items: center; width: 26px; height: 26px; border-radius: 7px; background: #c3f454; }
+.as-promise { margin-left: auto; display: flex; align-items: center; gap: 7px; color: #bcc6bf; font-size: 10px; }
+.as-promise i { width: 7px; height: 7px; border-radius: 50%; background: #9fd844; }
+.as-workspace { display: grid; grid-template-columns: 148px minmax(0, 1fr); min-height: 384px; }
+.as-sidebar { display: flex; flex-direction: column; padding: 16px 13px; background: #0d100d; border-right: 1px solid #2d332e; }
+.as-heading { display: flex; align-items: center; gap: 7px; margin-bottom: 14px; font-size: 12.5px; font-weight: 650; letter-spacing: -0.2px; }
+.as-help { display: grid; place-items: center; width: 14px; height: 14px; border-radius: 50%; border: 1px solid #8f9b88; color: #d6e1d0; font-size: 9px; }
+.as-modes { display: flex; gap: 6px; margin-bottom: 12px; }
+.as-modes span { flex: 1; text-align: center; padding: 7px 0; border-radius: 7px; background: #181d19; color: #aeb8b0; border: 1px solid #384238; font-size: 11px; font-weight: 700; }
+.as-modes span.active { color: #d5ff90; border-color: #a8d450; background: #273122; }
+.as-source { display: flex; gap: 9px; align-items: flex-start; padding: 12px; background: #191e1a; border: 1px solid #c9d1c5; border-radius: 10px; }
+.as-source svg { flex: 0 0 auto; color: #c3f454; }
+.as-source b { display: block; font-size: 11px; margin-bottom: 4px; }
+.as-source small { display: block; color: #849087; font: 9px/1.4 ui-monospace, SFMono-Regular, monospace; }
+.as-actions { display: flex; justify-content: flex-end; gap: 9px; margin-top: 14px; }
+.as-actions span { min-width: 68px; text-align: center; padding: 9px 0; border-radius: 9px; font-weight: 800; font-size: 11px; }
+.as-clear { color: #dfe7e1; border: 1px solid #3b443d; }
+.as-scan { color: #142008; background: #c3f454; border: 1px solid #c3f454; }
+.as-report { display: flex; flex-direction: column; min-width: 0; padding: 18px; }
+.as-report-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 12px; margin-bottom: 15px; }
+.as-report-head h3 { margin: 0; font-size: 18px; letter-spacing: -0.5px; color: #e8efe9; }
+.as-pills { display: flex; gap: 8px; }
+.as-pill { display: flex; flex-direction: column; gap: 2px; min-width: 62px; padding: 7px 11px; border-radius: 10px; background: #1a201b; border: 1px solid #3a443c; }
+.as-pill b { font-size: 16px; font-weight: 850; line-height: 1; color: #eaf0ec; }
+.as-pill small { font-size: 8px; font-weight: 700; letter-spacing: 0.6px; text-transform: uppercase; color: #8e9991; }
+.as-pill.critical { border-color: #ff8175; background: #2a1d1b; }
+.as-pill.critical b { color: #ff8175; }
+.as-card { background: #1a1f1b; border: 1px solid rgba(255, 255, 255, 0.72); border-radius: 11px; overflow: hidden; }
+.as-card > header { display: flex; align-items: center; gap: 10px; padding: 11px 14px; border-bottom: 1px solid #353c36; }
+.as-card-icon { display: grid; place-items: center; width: 25px; height: 25px; border-radius: 7px; color: #c8f56b; background: #293326; }
+.as-card h4 { margin: 0; font-size: 12px; }
+.as-card header small { margin-left: auto; color: #859087; font-size: 10px; }
+.as-finding { display: grid; grid-template-columns: 8px minmax(0, 1fr) auto; gap: 11px; align-items: start; padding: 11px 14px; border-bottom: 1px solid #2d342f; }
+.as-finding:last-child { border-bottom: 0; }
+.as-dot { width: 7px; height: 7px; margin-top: 4px; border-radius: 50%; background: #68736b; }
+.as-finding.crit .as-dot { background: #ff695e; box-shadow: 0 0 0 3px rgba(255, 105, 94, 0.12); }
+.as-finding b { display: block; font-size: 11px; line-height: 1.35; }
+.as-finding code { display: block; margin-top: 3px; color: #8a958d; font: 9px/1.4 ui-monospace, SFMono-Regular, monospace; }
+.as-finding p { margin: 6px 0 0; color: #a8b2ab; font-size: 10px; line-height: 1.45; }
+.as-tag { align-self: start; padding: 3px 6px; color: #ff9289; background: #3b2320; border: 1px solid #60302b; border-radius: 5px; font-size: 8px; letter-spacing: 0.6px; }
+
 .voxora-copy .hero-text {
   text-align: center;
 }
