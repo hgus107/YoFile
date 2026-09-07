@@ -99,6 +99,19 @@ body[data-product="voiceover"] .brand-mark {
   overflow: hidden;
 }
 
+body[data-product="voiceover"] .voiceover-hero-text {
+  width: min(1040px, calc(100vw - 48px));
+  max-width: none;
+  margin: 0 0 0 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.voiceover-hero-text span {
+  display: block;
+  width: 100%;
+}
+
 .voiceover-preview { background: #edf5ff; }
 .voiceover-window-bar { border-bottom-color: #d6e0ed; background: #f8fbff; }
 .voiceover-window-bar .window-title { color: #23324a; }
